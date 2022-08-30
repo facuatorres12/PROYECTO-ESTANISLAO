@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+     }
+ 
+body{
+    background-color: #8d6346;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #f7fff7;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+    padding: 0px;
+     }
+
+header .header-logo img{
+    width: 320px;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+}     
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 45px;
+    box-sizing: border-box;
+    background-color: #163554; 
+    border-bottom: none;
+    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+}
+
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a{
+    line-height: 80px;
+    color: #bec6cc;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background: rgba(15, 14, 48, 0.224);
+    border-radius: 6px;
+}
+
+main section h1{
+    font-size: 85px;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    padding-top: 300px;
+    color: #c0c8d3;
+    font-weight: bold;
+}
+
+main section p{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding-top: 30px;
+    font-style: italic;
+    color: #b7c0cd;
+    font-weight: bold;
+}
+
+main{ 
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+footer {
+   width: 100%;
+   background-color: #163554;
+   color: #f7fff7;
+   text-transform: uppercase;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   align-items: center;
+}
+
+footer .contenedor{
+    display: flex;
+}
+
+footer .contenedor .caja{ 
+    flex: 1 1 25rem;
+}
+
+footer .contenedor .caja p{
+    font-size: 25px;
+    color: #bec6cc;
+    padding: 13px 0;
+    margin-left: 40px;
+    margin-top: 35px;
+    font-family: 'Cinzel', serif;
+}
+
+footer .contenedor .caja a .logo{
+    height: 150px;
+    width: auto;
+    margin-right: 190px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+}
+
+footer .contenedor .caja .caja-rs{
+    display: inline;
+    float: right;
+    margin-right: 50px;
+}
+
+footer .contenedor .caja h3{
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    color: #bec6cc;
+}
+
+footer .contenedor .caja img{
+    float: right;
+    margin-right: 15px;
+
+}
+
+footer .contenedor .caja a img{
+    height: 44px;
+    width: auto;
+    display: inline;
+    margin-left: 0px;
+    margin-top: 0px;
+}
