@@ -14,8 +14,14 @@ header .logo img{
     width: auto;
     position: fixed;
     padding-bottom: 20px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
 }
 
+header .logo img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 body{
     background-image: url(../img/fondo.jpg);

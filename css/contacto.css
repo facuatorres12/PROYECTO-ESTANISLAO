@@ -24,6 +24,13 @@ header .logo img{
     width: auto;
     position: fixed;
     padding-bottom: 20px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+
+header .logo img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
  nav{
@@ -75,6 +82,13 @@ legend{
     -webkit-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
     -moz-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
     border-radius: 26px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+
+legend:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 section h1{
