@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+     }
+
+
+.carouser-inner{
+    height: 290px;
+    padding-top: 110px;
+}

@@ -23,7 +23,7 @@ header .header-logo img{
     width: 320px;
     height: auto;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }     
 
 nav{
@@ -67,8 +67,8 @@ main section h1{
     font-size: 85px;
     font-family: 'Cinzel', serif;
     text-align: center;
-    padding-top: 300px;
-    color: #c0c8d3;
+    padding-top: 150px;
+    color:#bec6cc ;
     font-weight: bold;
 }
 
@@ -76,9 +76,9 @@ main section p{
     font-size: 40px;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    padding-top: 30px;
+    padding-top: 17px;
     font-style: italic;
-    color: #b7c0cd;
+    color: #bec6cc;
     font-weight: bold;
 }
 
@@ -88,7 +88,104 @@ main{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;    
+    height: 100vh; 
+    box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.75);   
+}
+
+
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    margin: 22px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 350px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+    background-image: url(/img/back-card.png);
+}
+
+.card:hover .img__back{
+    bottom: -40px;
+}
+
+.card .description{
+    background: #7c8c9c;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+    font-family: 'Cinzel', serif ;
+}
+
+.card .description input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #446b93;
+    color: #bec6cc;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+    font-family: 'Cinzel', serif ;
+}
+
+.card .description input:hover{
+    background: #7597b9;
 }
 
 footer {
