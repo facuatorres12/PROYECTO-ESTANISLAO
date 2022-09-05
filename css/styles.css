@@ -67,29 +67,97 @@ font-weight: bold;
 font-size: 16px;
 }
 
-.carousel-inner{
-    height: 709px;
+.home{
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+    box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
 }
 
-main section h1{
-    font-size: 85px;
-    font-family: 'Cinzel', serif;
-    text-align: center;
-    padding-top: 150px;
-    color:#bec6cc ;
-    font-weight: bold;
+.home .carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.home .carousel-item:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.home .carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.home .carousel-item h2{
+	font-size: 60px;
+	color: #bec6cc;
+	margin:0 0 10px;
+	opacity: 0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item p{
+	font-size: 30px;
+	margin:0;
+	color: #bec6cc;
+	opacity:0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
 }
 
-main section p{
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    padding-top: 17px;
-    font-style: italic;
-    color: #bec6cc;
-    font-weight: bold;
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
 }
 
+@media(max-width: 767px){
+  .home .carousel-control-next, 
+  .home .carousel-control-prev{
+  	display: none;
+  }
+  .home .carousel-indicators li{
+  	height: 60px;
+  	width: 60px;
+  }
+  .home .carousel-item h2{
+  	font-size: 45px;
+  }
+  .home .carousel-item p{
+  	font-size: 22px;
+  }
+}
 .container__cards{
     max-width: 1200px;
     margin: auto;
