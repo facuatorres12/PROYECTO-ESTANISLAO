@@ -40,6 +40,26 @@ height: 100px;
 .container-fluid{
 top: 0;
 width: 100%;
+padding: 10px 45px;
+box-sizing: border-box;
+background-color: #163554; 
+border-bottom: none;
+box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+-webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+-moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
+}
+
+.nav-item a p{
+color: #bec6cc;
+padding: 10px;
+padding-top: 28px;
+font-weight: bold;
+font-size: 16px;
+}
+
+.container-fluid{
+top: 0;
+width: 100%;
 height: 100px;
 padding: 10px 45px;
 box-sizing: border-box;
@@ -57,6 +77,8 @@ border-radius: 6px;
 
 #navbarNav {
 justify-content: flex-end;
+background-color: #163554;
+z-index: 1;
 }
 
 .nav-item a p{
@@ -251,69 +273,6 @@ font-size: 16px;
     background: #7597b9;
 }
 
-footer {
-   width: 100%;
-   background-color: #163554;
-   color: #f7fff7;
-   text-transform: uppercase;
-   padding-top: 40px;
-   padding-bottom: 40px;
-   align-items: center;
-}
-
-footer .contenedor{
-    display: flex;
-}
-
-footer .contenedor .caja{ 
-    flex: 1 1 25rem;
-}
-
-footer .contenedor .caja p{
-    font-size: 25px;
-    color: #bec6cc;
-    padding: 13px 0;
-    margin-left: 40px;
-    margin-top: 35px;
-    font-family: 'Cinzel', serif;
-}
-
-footer .contenedor .caja a .logo{
-    height: 150px;
-    width: auto;
-    margin-right: 190px;
-    margin-left: 100px;
-    margin-bottom: 40px;
-    padding-top: 30px;
-}
-
-footer .contenedor .caja .caja-rs{
-    display: inline;
-    float: right;
-    margin-right: 50px;
-}
-
-footer .contenedor .caja h3{
-    font-size: 20px;
-    font-family: 'Cinzel', serif;
-    margin-top: 45px;
-    margin-bottom: 10px;
-    color: #bec6cc;
-}
-
-footer .contenedor .caja img{
-    float: right;
-    margin-right: 15px;
-
-}
-
-footer .contenedor .caja a img{
-    height: 44px;
-    width: auto;
-    display: inline;
-    margin-left: 0px;
-    margin-top: 0px;
-}
 
 /*-----------------------------------------------COCKTAILS-----------------------------------------*/
 
@@ -344,7 +303,7 @@ section{
     width: 90%;
     max-width: 1180px;
     margin: 10px auto;
-    padding: 145px 0px; 
+    padding-top: 125px; 
 }
 
 .gintonic{
@@ -356,7 +315,7 @@ section{
         "descripcion-gintonic descripcion-gintonic img-gin"
         "elaboracion-gintonic elaboracion-gintonic elaboracion-gintonic";
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill , 1fr);
     grid-template-areas: repeat(3, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 18px;
@@ -455,7 +414,7 @@ section{
         "descripcion-martini descripcion-martini img-martini"
         "elaboracion-martini elaboracion-martini elaboracion-martini";
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-areas: repeat(3, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 18px;
@@ -538,7 +497,7 @@ section{
         "descripcion-negroni descripcion-negroni img-negroni"
         "elaboracion-negroni elaboracion-negroni elaboracion-negroni";
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill 1fr);
     grid-template-areas: repeat(3, 1fr);
     grid-row-gap: 10px;
     grid-column-gap: 18px;
@@ -623,68 +582,216 @@ section{
     padding: 3px;
 }
 
-footer {
-    width: 100%;
-    background-color: #163554;
+/*-------------------------------------------------------CONTACTO---------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    font-family: 'Roboto Condensed', sans-serif;
     color: #f7fff7;
-    text-transform: uppercase;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    align-items: center;
- }
- 
- footer .contenedor{
-     display: flex;
- }
- 
- footer .contenedor .caja{ 
-     flex: 1 1 25rem;
- }
- 
- footer .contenedor .caja p{
-     font-size: 25px;
-     color: #bec6cc;
-     padding: 13px 0;
-     margin-left: 40px;
-     margin-top: 35px;
-     font-family: 'Cinzel', serif;
- }
- 
- footer .contenedor .caja a .logo{
-     height: 150px;
-     width: auto;
-     margin-right: 190px;
-     margin-left: 100px;
-     margin-bottom: 40px;
-     padding-top: 30px;
- }
- 
- footer .contenedor .caja .caja-rs{
-     display: inline;
-     float: right;
-     margin-right: 50px;
- }
- 
- footer .contenedor .caja h3{
-     font-size: 20px;
-     font-family: 'Cinzel', serif;
-     margin-top: 45px;
-     margin-bottom: 10px;
-     color: #bec6cc;
- }
- 
- footer .contenedor .caja img{
-     float: right;
-     margin-right: 15px;
- 
- }
- 
- footer .contenedor .caja a img{
-     height: 44px;
-     width: auto;
-     display: inline;
-     margin-left: 0px;
-     margin-top: 0px;
- }
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+    padding: 0px;
+}
 
+main{
+    padding-bottom: 200px;
+}
 
+section{
+    margin: 0;
+    padding-top: 100px;
+    margin-left: 250px;
+}
+
+legend{
+    box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    border-radius: 26px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+
+legend:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.06);
+}
+
+section h1{
+    font-size: 60px;
+    font-family:'Cinzel', serif;
+    text-align: center;
+    padding-top: 10px;
+    color: #0a2239;
+}
+
+section form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 20px;
+    max-width: 1000px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    
+    width: 320px;
+    margin: 18px;
+}
+
+.contact-form label{
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: #0a2239;
+}
+
+.contact-form input{
+    font-size: 22px;
+    height: 30px;
+    padding-left: 8px;
+    border: 2px solid #0a2239 ;
+    border-radius: 5px;
+}
+
+.contact-form select{
+    font-size: 22px;
+    height: 30px;
+    padding-left: 8px;
+
+    border: 2px solid #0a2239;
+    border-radius: 5px;
+}
+
+.contact-area{
+    display: flex;
+    flex-direction: column;
+
+    width: 327px;
+    margin: 18px
+}
+
+.contact-area label{
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: #0a2239;
+}
+
+textarea{
+    font-size: 22px;
+
+    max-width: 100%;
+    height: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.boton{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 130px;
+    padding-bottom: 30px;
+}
+
+.boton input{
+    font-size: 18px;
+    padding: 6px;
+    border: 2px solid #0a2239;
+    border-radius: 5px;
+}
+
+/*----------------------------------------EVENTOS----------------------------------------------------------*/
+#galeria .row{
+    padding-bottom: 35px;
+}
+
+#galeria img{
+    width: 100%;
+    height: 450px;
+    border-radius: 13px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+
+#galeria .col-lg-4{
+    margin: 0;
+    padding: 20px;
+}
+
+#galeria img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+footer{
+    background-color: #163554;
+    position: absolute;
+    min-height: 70px;
+    width: 100%;
+    top: 100%;
+}
+
+footer .container-fluid{
+    padding: 0px;
+    margin: 0px;
+    height: 200px;
+}
+
+footer .logo{
+    width: 350px;
+    padding-top: 45px;
+    margin-left: 14%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+
+footer img:hover{
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}
+
+footer p{
+    margin-left: 28%;
+    padding-top: 45px;
+    font-family:'Cinzel', serif;
+    color: #bec6cc;
+    font-size: 18px;
+}
+
+footer .contacto{
+    margin-left: 34%;
+    padding-top: 45px;
+}
+
+footer .contacto h3{
+    font-family:'Cinzel', serif;
+    font-size: 30px;
+    color: #bec6cc;
+}
+
+.footer-link img{
+    width: 40px;
+    padding: 4px;
+    margin: 6px;
+}
