@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+body {
+  background-image: url(../img/fondo.jpg);
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #f7fff7;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+  padding: 0px; }
+
+.navbar {
+  padding: 0%;
+  height: 100px; }
+  .navbar .navbar-brand img {
+    height: 90px;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s; }
+  .navbar .navbar-brand img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  .navbar .container-fluid {
+    top: 0;
+    width: 100%;
+    padding: 10px 45px;
+    box-sizing: border-box;
+    background-color: #163554;
+    border-bottom: none;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.83);
+    -webkit-box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.83);
+    -moz-box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.83); }
+  .navbar .nav-item a p {
+    color: #bec6cc;
+    padding: 10px;
+    padding-top: 28px;
+    font-weight: bold;
+    font-size: 16px; }
+  .navbar nav ul li a:hover {
+    background: rgba(15, 14, 48, 0.224);
+    border-radius: 6px; }
+  .navbar #navbarNav {
+    justify-content: flex-end;
+    background-color: #163554;
+    z-index: 1; }
+  .navbar .nav-item a p {
+    color: #bec6cc;
+    padding: 10px;
+    padding-top: 28px;
+    font-weight: bold;
+    font-size: 16px; }
+
+footer {
+  background-color: #163554;
+  position: absolute;
+  min-height: 70px;
+  width: 100%;
+  top: 100%; }
+  footer .container-fluid {
+    padding: 0px;
+    margin: 0px;
+    height: 200px; }
+  footer .logo {
+    width: 350px;
+    padding-top: 45px;
+    margin-left: 14%;
+    -webkit-transition: 0.7s;
+    transition: 0.7s; }
+  footer img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  footer p {
+    margin-left: 28%;
+    padding-top: 45px;
+    font-family: 'Cinzel', serif;
+    color: #bec6cc;
+    font-size: 18px; }
+  footer .contacto {
+    margin-left: 34%;
+    padding-top: 45px; }
+  footer .contacto h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #bec6cc; }
+  footer .footer-link img {
+    width: 40px;
+    padding: 4px;
+    margin: 6px; }
