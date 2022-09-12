@@ -1,0 +1,52 @@
+footer{
+    background-color: #163554;
+    position: absolute;
+    min-height: 70px;
+    width: 100%;
+    top: 100%;
+    
+    .container-fluid{
+        padding: 0px;
+        margin: 0px;
+        height: 200px;
+    }
+    
+    .logo{
+        width: 350px;
+        padding-top: 45px;
+        margin-left: 14%;
+        -webkit-transition: 0.7s;
+        transition: 0.7s;
+        &:hover{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+    
+    p{
+        margin-left: 28%;
+        padding-top: 45px;
+        font-family:'Cinzel', serif;
+        color: #bec6cc;
+        font-size: 18px;
+    }
+    
+    .contacto{
+        margin-left: 34%;
+        padding-top: 45px;
+    }
+    
+    .contacto h3{
+        font-family:'Cinzel', serif;
+        font-size: 30px;
+        color: #bec6cc;
+    }
+    
+    .footer-link img{
+        width: 40px;
+        padding: 4px;
+        margin: 6px;
+    }
+    
+}
+
