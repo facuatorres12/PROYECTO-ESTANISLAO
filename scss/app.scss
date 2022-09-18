@@ -1,3 +1,618 @@
-@import'layout/footer.scss';
-@import'layout/nav.scss';
+@import'layout/footer';
+@import'layout/nav';
+@import'estilos generales';
+@import'variables';
+
+.home{
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+    box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+}
+
+.home .carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.home .carousel-item:before{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.home .carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.home .carousel-item h2{
+	font-size: map-get($font-sz , $font-xl);
+	color: $color-primario;
+	margin:0 0 10px;
+	opacity: 0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item p{
+	font-size: map-get($font-sz, $font-l );
+	margin:0;
+	color: $color-primario;
+	opacity:0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@media(max-width: 767px){
+  .home .carousel-control-next, 
+  .home .carousel-control-prev{
+  	display: none;
+  }
+  .home .carousel-indicators li{
+  	height: 60px;
+  	width: 60px;
+  }
+  .home .carousel-item h2{
+  	font-size: map-get($font-sz, $font-l);
+  }
+  .home .carousel-item p{
+  	font-size: map-get($font-sz, $font-m);
+  }
+}
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    margin: 22px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 350px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img_back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+    background-image: url(../img/back-card.png);
+}
+
+.card:hover .img_back{
+    bottom: -40px;
+}
+
+.card .description{
+    background: #7c8c9c;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+    font-family: 'Cinzel', serif ;
+}
+
+.card .description input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #446b93;
+    color: #bec6cc;
+    font-size: map-get($font-sz , $font-s);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+    font-family: 'Cinzel', serif ;
+}
+
+.card .description input:hover{
+    background: #7597b9;
+}
+
+
+/*-----------------------------------------------COCKTAILS-----------------------------------------*/
+
+section{
+    width: 90%;
+    max-width: 1180px;
+    margin: 10px auto;
+    padding-top: 105px; 
+}
+
+.gintonic{
+    margin: 20px;
+    padding: 50px 0px;
+    display:grid ;
+    grid-template-areas: 
+        "gin-titulo gin-titulo img-gin"
+        "descripcion-gintonic descripcion-gintonic img-gin"
+        "elaboracion-gintonic elaboracion-gintonic elaboracion-gintonic";
+
+    grid-template-columns: repeat(auto-fill , 1fr);
+    grid-template-areas: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+.gin-titulo{
+    grid-area: gin-titulo;
+}
+
+.img-gin{
+    grid-area: img-gin;
+}
+
+.descripcion-gintonic{
+    grid-area: descripcion-gintonic;
+    display: flex;
+    align-items: center;
+}
+
+.elaboracion-gintonic{
+    grid-area: elaboracion-gintonic;
+}
+
+.gin-titulo{
+    padding-bottom: 44px;
+}
+
+.gintonic  h1{
+    font-family:'Cinzel', serif;
+    font-size: map-get($font-sz , $font-xl);
+    color: $color-cocktails;
+    text-align: center;
+}
+
+.gintonic aside img{
+    width: 400px;
+    height: 400px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    transition: all 400ms ease;
+}
+
+.gintonic aside img:hover{
+    transform: translateY(-4%);
+}
+
+.descripcion-gintonic{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-gintonic td{
+    padding: 4px;
+}
+
+.elaboracion-gintonic{
+    text-align: center;
+}
+
+.elaboracion-gintonic h3{
+    font-size: map-get($font-sz, $font-l );
+    font-family: 'Cinzel', serif;
+    padding-top: 37px;
+    color: $color-cocktails;
+}
+
+.gintonic h4{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+}
+
+.elaboracion-gintonic .pasos{  
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding: 4px;
+}
+
+.pasos p{
+    padding: 3px;
+}
+
+.dry-martini{
+    margin: 20px;
+    padding: 50px 0px;
+    display:grid ;
+    grid-template-areas: 
+        "martini-titulo martini-titulo img-martini"
+        "descripcion-martini descripcion-martini img-martini"
+        "elaboracion-martini elaboracion-martini elaboracion-martini";
+
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-areas: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+.martini-titulo{
+    grid-area: martini-titulo;
+}
+
+.img-martini{
+    grid-area: img-martini;
+}
+
+.descripcion-martini{
+    grid-area: descripcion-martini;
+}
+
+.elaboracion-martini{
+    grid-area: elaboracion-martini;
+}
+
+.martini-titulo h1{
+    font-family:'Cinzel', serif;
+    font-size: map-get($font-sz , $font-xl);
+    color: $color-cocktails;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.dry-martini aside img{
+    height: 400px;
+    width: auto;
+    border-radius: 9px;
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    transition: all 400ms ease;
+}
+
+.dry-martini aside img:hover{
+    transform: translateY(-4%);
+}
+
+.descripcion-martini{ 
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-martini td{
+    padding: 4px;
+}
+
+.elaboracion-martini{
+    text-align: center;
+}
+
+.elaboracion-martini h3{
+    font-size: map-get($font-sz, $font-l );
+    font-family: 'Cinzel', serif;
+    color: $color-cocktails;
+    padding-top: 34px;
+}
+
+.pasos p{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding: 3px;
+}
+
+.negroni{
+    margin: 20px;
+    padding: 50px 0px;
+    display:grid ;
+    grid-template-areas: 
+        "negroni-titulo negroni-titulo img-negroni"
+        "descripcion-negroni descripcion-negroni img-negroni"
+        "elaboracion-negroni elaboracion-negroni elaboracion-negroni";
+
+    grid-template-columns: repeat(auto-fill 1fr);
+    grid-template-areas: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+.negroni-titulo{
+    grid-area: negroni-titulo;
+}
+
+.img-negroni{
+    grid-area: img-negroni;
+}
+
+.descripcion-negroni{
+    grid-area: descripcion-negroni;
+}
+
+.elaboracion-negroni{
+    grid-area: elaboracion-negroni;
+}
+
+.negroni h1{
+    font-family:'Cinzel', serif;
+    font-size: map-get($font-sz , $font-xl);
+    color: $color-cocktails;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.negroni aside img{
+    width: 400px;
+    height: 400px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    transition: all 400ms ease;
+}
+
+.negroni aside img:hover{
+    transform: translateY(-4%);
+}
+
+.descripcion-negroni{
+    font-family: 'Cinzel', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-negroni td{
+    padding: 4px;
+}
+
+.elaboracion-negroni h3{
+    font-size: map-get($font-sz, $font-l );
+    font-family: 'Cinzel', serif;
+    padding-top: 37px;
+    color: $color-cocktails;
+}
+
+.elaboracion-negroni{
+    text-align: center;
+}
+
+.negroni h4{
+    font-family: 'Cinzel', serif;
+    font-size: map-get($font-sz, $font-m );
+    color: $color-cocktails;
+    padding-bottom: 9px;
+}
+
+.elaboracion-negroni .pasos{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, $font-m );
+    color:$color-cocktails ;
+    padding: 4px;
+}
+
+.pasos p{
+    padding: 3px;
+}
+
+/*-------------------------------------------------------CONTACTO---------------------------------*/
+
+
+section{
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 17px 140px;
+    padding-bottom: 300px;
+    
+}
+
+legend{
+    box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    border-radius: 26px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+
+legend:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.06);
+}
+
+section h1{
+    font-size: map-get($font-sz , $font-xl);
+    font-family:'Cinzel', serif;
+    text-align: center;
+    padding-top: 10px;
+    color: $color-cocktails;
+}
+
+section form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 20px;
+    max-width: 1000px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    
+    width: 320px;
+    margin: 18px;
+}
+
+.contact-form label{
+    font-size: map-get($font-sz, $font-m );
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: $color-cocktails;
+}
+
+.contact-form input{
+    font-size: map-get($font-sz, $font-m );
+    height: 30px;
+    padding-left: 8px;
+    border: 2px solid $color-cocktails ;
+    border-radius: 5px;
+}
+
+.contact-form select{
+    font-size: map-get($font-sz, $font-m );
+    height: 30px;
+    padding-left: 8px;
+
+    border: 2px solid $color-cocktails;
+    border-radius: 5px;
+}
+
+.contact-area{
+    display: flex;
+    flex-direction: column;
+
+    width: 327px;
+    margin: 18px
+}
+
+.contact-area label{
+    font-size: map-get($font-sz, $font-m );
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: $color-cocktails;
+}
+
+textarea{
+    font-size: map-get($font-sz, $font-m );
+
+    max-width: 100%;
+    height: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.boton{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 130px;
+    padding-bottom: 30px;
+}
+
+.boton input{
+    font-size: map-get($font-sz, $font-s );
+    padding: 6px;
+    border: 2px solid $color-cocktails;
+    border-radius: 5px;
+}
+
+/*----------------------------------------EVENTOS----------------------------------------------------------*/
+#galeria .row{
+    padding-bottom: 35px;
+}
+
+#galeria img{
+    width: 100%;
+    height:400px;
+    border-radius: 13px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+
+#galeria .col-lg-4{
+    margin: 0;
+    padding: 20px;
+}
+
+#galeria img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+
+
 

@@ -12,17 +12,12 @@ nav {
             }
     }
     
-    .navbar{
-    padding-top: 0px;
-    height: 100px;
-    }
-    
     .container-fluid{
     top: 0;
     width: 100%;
     padding: 10px 45px;
     box-sizing: border-box;
-    background-color: #163554; 
+    background-color: $color-secundario; 
     border-bottom: none;
     box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
     -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.83);
@@ -30,7 +25,7 @@ nav {
     }
 
     .nav-item a p{
-    color: #bec6cc;
+    color: $color-primario;
     padding: 10px;
     padding-top: 28px;
     font-weight: bold;
@@ -39,7 +34,7 @@ nav {
     
     #navbarNav {
     justify-content: flex-end;
-    background-color: #163554;
+    background-color: $color-secundario;
     z-index: 1;
     }
 }

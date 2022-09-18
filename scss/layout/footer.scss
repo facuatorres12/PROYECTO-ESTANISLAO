@@ -1,5 +1,5 @@
 footer{
-    background-color: #163554;
+    background-color: $color-secundario;
     position: absolute;
     min-height: 70px;
     width: 100%;
@@ -27,7 +27,7 @@ footer{
         margin-left: 28%;
         padding-top: 45px;
         font-family:'Cinzel', serif;
-        color: #bec6cc;
+        color: $color-primario;
         font-size: 18px;
     }
     
@@ -39,7 +39,7 @@ footer{
     .contacto h3{
         font-family:'Cinzel', serif;
         font-size: 30px;
-        color: #bec6cc;
+        color: $color-primario;
     }
     
     .footer-link img{
