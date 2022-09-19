@@ -1,7 +1,25 @@
+@import'colors';
+@import'size';
 @import'layout/footer';
 @import'layout/nav';
 @import'estilos generales';
-@import'variables';
+
+@mixin cocktelesgrid {
+    margin: 20px;
+    padding: 50px 0px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-areas: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+%h1{
+    font-family:'Cinzel', serif;
+    font-size: map-get($font-sz , font-xl);
+    color: $color-cocktails;
+    text-align: center;
+}
 
 .home{
     width: 100%;
@@ -36,14 +54,14 @@
 	text-align: center;
 }
 .home .carousel-item h2{
-	font-size: map-get($font-sz , $font-xl);
+	font-size: map-get($font-sz , font-xl);
 	color: $color-primario;
 	margin:0 0 10px;
 	opacity: 0;
     font-family:'Cinzel', serif;
 }
 .home .carousel-item p{
-	font-size: map-get($font-sz, $font-l );
+	font-size: map-get($font-sz, font-l );
 	margin:0;
 	color: $color-primario;
 	opacity:0;
@@ -87,10 +105,10 @@
   	width: 60px;
   }
   .home .carousel-item h2{
-  	font-size: map-get($font-sz, $font-l);
+  	font-size: map-get($font-sz, font-l);
   }
   .home .carousel-item p{
-  	font-size: map-get($font-sz, $font-m);
+  	font-size: map-get($font-sz, font-m);
   }
 }
 .container__cards{
@@ -175,7 +193,7 @@
     border: none;
     background: #446b93;
     color: #bec6cc;
-    font-size: map-get($font-sz , $font-s);
+    font-size: map-get($font-sz , font-s);
     cursor: pointer;
     border-radius: 8px;
     transition: all 300ms;
@@ -197,18 +215,11 @@ section{
 }
 
 .gintonic{
-    margin: 20px;
-    padding: 50px 0px;
-    display:grid ;
+    @include cocktelesgrid;
     grid-template-areas: 
         "gin-titulo gin-titulo img-gin"
         "descripcion-gintonic descripcion-gintonic img-gin"
-        "elaboracion-gintonic elaboracion-gintonic elaboracion-gintonic";
-
-    grid-template-columns: repeat(auto-fill , 1fr);
-    grid-template-areas: repeat(3, 1fr);
-    grid-row-gap: 10px;
-    grid-column-gap: 18px;
+        "elaboracion-gintonic elaboracion-gintonic elaboracion-gintonic"; 
 }
 
 .gin-titulo{
@@ -234,10 +245,7 @@ section{
 }
 
 .gintonic  h1{
-    font-family:'Cinzel', serif;
-    font-size: map-get($font-sz , $font-xl);
-    color: $color-cocktails;
-    text-align: center;
+    @extend %h1;
 }
 
 .gintonic aside img{
@@ -256,7 +264,7 @@ section{
 
 .descripcion-gintonic{
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding-bottom: 30px;
     margin-left: 50px;
@@ -271,7 +279,7 @@ section{
 }
 
 .elaboracion-gintonic h3{
-    font-size: map-get($font-sz, $font-l );
+    font-size: map-get($font-sz, font-l );
     font-family: 'Cinzel', serif;
     padding-top: 37px;
     color: $color-cocktails;
@@ -279,13 +287,13 @@ section{
 
 .gintonic h4{
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
 }
 
 .elaboracion-gintonic .pasos{  
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding: 4px;
 }
@@ -295,18 +303,11 @@ section{
 }
 
 .dry-martini{
-    margin: 20px;
-    padding: 50px 0px;
-    display:grid ;
+    @include cocktelesgrid;
     grid-template-areas: 
         "martini-titulo martini-titulo img-martini"
         "descripcion-martini descripcion-martini img-martini"
         "elaboracion-martini elaboracion-martini elaboracion-martini";
-
-    grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-areas: repeat(3, 1fr);
-    grid-row-gap: 10px;
-    grid-column-gap: 18px;
 }
 
 .martini-titulo{
@@ -326,11 +327,9 @@ section{
 }
 
 .martini-titulo h1{
-    font-family:'Cinzel', serif;
-    font-size: map-get($font-sz , $font-xl);
-    color: $color-cocktails;
+    @extend %h1;
     padding: 40px 0px;
-    text-align: center;
+    
 }
 
 .dry-martini aside img{
@@ -349,7 +348,7 @@ section{
 
 .descripcion-martini{ 
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding-bottom: 30px;
     margin-left: 50px;
@@ -364,7 +363,7 @@ section{
 }
 
 .elaboracion-martini h3{
-    font-size: map-get($font-sz, $font-l );
+    font-size: map-get($font-sz, font-l );
     font-family: 'Cinzel', serif;
     color: $color-cocktails;
     padding-top: 34px;
@@ -372,24 +371,17 @@ section{
 
 .pasos p{
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding: 3px;
 }
 
 .negroni{
-    margin: 20px;
-    padding: 50px 0px;
-    display:grid ;
+    @include cocktelesgrid;
     grid-template-areas: 
         "negroni-titulo negroni-titulo img-negroni"
         "descripcion-negroni descripcion-negroni img-negroni"
         "elaboracion-negroni elaboracion-negroni elaboracion-negroni";
-
-    grid-template-columns: repeat(auto-fill 1fr);
-    grid-template-areas: repeat(3, 1fr);
-    grid-row-gap: 10px;
-    grid-column-gap: 18px;
 }
 
 .negroni-titulo{
@@ -409,11 +401,8 @@ section{
 }
 
 .negroni h1{
-    font-family:'Cinzel', serif;
-    font-size: map-get($font-sz , $font-xl);
-    color: $color-cocktails;
+    @extend %h1;
     padding-bottom: 8px;
-    text-align: center;
 }
 
 .negroni aside img{
@@ -432,7 +421,7 @@ section{
 
 .descripcion-negroni{
     font-family: 'Cinzel', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding-bottom: 30px;
     margin-left: 50px;
@@ -443,7 +432,7 @@ section{
 }
 
 .elaboracion-negroni h3{
-    font-size: map-get($font-sz, $font-l );
+    font-size: map-get($font-sz, font-l );
     font-family: 'Cinzel', serif;
     padding-top: 37px;
     color: $color-cocktails;
@@ -455,14 +444,14 @@ section{
 
 .negroni h4{
     font-family: 'Cinzel', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color: $color-cocktails;
     padding-bottom: 9px;
 }
 
 .elaboracion-negroni .pasos{
     font-family: 'Playfair Display', serif;
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     color:$color-cocktails ;
     padding: 4px;
 }
@@ -478,7 +467,7 @@ section{
     padding-left: 120px;
     padding-right: 120px;
     margin: 17px 140px;
-    padding-bottom: 300px;
+    padding-bottom: 600px;
     
 }
 
@@ -497,7 +486,7 @@ legend:hover{
 }
 
 section h1{
-    font-size: map-get($font-sz , $font-xl);
+    font-size: map-get($font-sz , font-xl);
     font-family:'Cinzel', serif;
     text-align: center;
     padding-top: 10px;
@@ -526,7 +515,7 @@ section form{
 }
 
 .contact-form label{
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
 
@@ -534,7 +523,7 @@ section form{
 }
 
 .contact-form input{
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     height: 30px;
     padding-left: 8px;
     border: 2px solid $color-cocktails ;
@@ -542,7 +531,7 @@ section form{
 }
 
 .contact-form select{
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     height: 30px;
     padding-left: 8px;
 
@@ -559,7 +548,7 @@ section form{
 }
 
 .contact-area label{
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
 
@@ -567,7 +556,7 @@ section form{
 }
 
 textarea{
-    font-size: map-get($font-sz, $font-m );
+    font-size: map-get($font-sz, font-m );
 
     max-width: 100%;
     height: 150px;
@@ -583,7 +572,7 @@ textarea{
 }
 
 .boton input{
-    font-size: map-get($font-sz, $font-s );
+    font-size: map-get($font-sz, font-s );
     padding: 6px;
     border: 2px solid $color-cocktails;
     border-radius: 5px;
