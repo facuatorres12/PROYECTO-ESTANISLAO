@@ -1,0 +1,188 @@
+@import'basics/estilos generales';
+@import'basics/colors';
+@import'basics/size';
+
+.home{
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+    box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(74,74,74,0.75);
+}
+
+.home .carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.home .carousel-item:before{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.home .carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.home .carousel-item h2{
+	font-size: map-get($font-sz , font-xl);
+	color: $color-primario;
+	margin:0 0 10px;
+	opacity: 0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item p{
+	font-size: map-get($font-sz, font-l );
+	margin:0;
+	color: $color-primario;
+	opacity:0;
+    font-family:'Cinzel', serif;
+}
+.home .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@media(max-width: 767px){
+  .home .carousel-control-next, 
+  .home .carousel-control-prev{
+  	display: none;
+  }
+  .home .carousel-indicators li{
+  	height: 60px;
+  	width: 60px;
+  }
+  .home .carousel-item h2{
+  	font-size: map-get($font-sz, font-l);
+  }
+  .home .carousel-item p{
+  	font-size: map-get($font-sz, font-m);
+  }
+}
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card{
+        width: 300px;
+        margin: 22px;
+        transition: all 300ms;
+        background-color: transparent;
+        border: none;
+    }
+
+    .card:hover{
+        width: 350px;
+    }
+
+    .card .cover{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card .cover img{
+        width: 250px;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 40px;
+        z-index: 1;
+        filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+        transition: all 400ms;
+    }
+
+    .card:hover .cover img{
+        top: 0px;
+        filter: none;
+    }
+
+    .card .img_back{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+        background-size: cover;
+        border-radius: 20px;
+        transition: all 300ms;
+        background-image: url(../img/back-card.png);
+    }
+
+    .card:hover .img_back{
+        bottom: -40px;
+    }
+
+    .card .description{
+        background: #7c8c9c;
+        margin-top: -10px;
+        padding: 20px;
+        border-radius: 0px 0px 20px 20px;
+        transition: all 300ms;
+    }
+
+    .card:hover .description{
+        padding: 40px;
+    }
+
+    .card .description h2{
+        margin-top: 10px;
+        font-family: 'Cinzel', serif ;
+    }
+
+    .card .description input{
+        padding: 10px 40px;
+        margin-top: 20px;
+        border: none;
+        background: #446b93;
+        color: #bec6cc;
+        font-size: map-get($font-sz , font-s);
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 300ms;
+        font-family: 'Cinzel', serif ;
+    }
+
+    .card .description input:hover{
+        background: #7597b9;
+    }
+}

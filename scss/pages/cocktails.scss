@@ -1,0 +1,251 @@
+@import'basics/estilos generales';
+@import'basics/colors';
+@import'basics/size';
+
+@mixin grid {
+    margin: 20px;
+    padding: 50px 0px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-areas: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 18px;
+}
+
+@mixin imghover {
+    width: 400px;
+    height: 400px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.41);
+    transition: all 400ms ease;
+    
+    &:hover{
+        transform: translateY(-4%);
+    }    
+}
+
+
+%h1{
+    font-family:'Cinzel', serif;
+    font-size: map-get($font-sz , font-xl);
+    color: $color-cocktails;
+    text-align: center;
+}
+
+.gintonic{
+    @include grid;
+    grid-template-areas: 
+        "gin-titulo gin-titulo img-gin"
+        "descripcion-gintonic descripcion-gintonic img-gin"
+        "elaboracion-gintonic elaboracion-gintonic elaboracion-gintonic"; 
+}
+
+.gin-titulo{
+    grid-area: gin-titulo;
+}
+
+.img-gin{
+    grid-area: img-gin;
+}
+
+.descripcion-gintonic{
+    grid-area: descripcion-gintonic;
+    display: flex;
+    align-items: center;
+}
+
+.elaboracion-gintonic{
+    grid-area: elaboracion-gintonic;
+}
+
+.gin-titulo{
+    padding-bottom: 44px;
+}
+
+.gintonic  h1{
+    @extend %h1;
+}
+
+.gintonic aside img{
+    @include imghover
+}
+
+.descripcion-gintonic{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-gintonic td{
+    padding: 4px;
+}
+
+.elaboracion-gintonic{
+    text-align: center;
+}
+
+.elaboracion-gintonic h3{
+    font-size: map-get($font-sz, font-l );
+    font-family: 'Cinzel', serif;
+    padding-top: 37px;
+    color: $color-cocktails;
+}
+
+.gintonic h4{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+}
+
+.elaboracion-gintonic .pasos{  
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding: 4px;
+}
+
+.pasos p{
+    padding: 3px;
+}
+
+.dry-martini{
+    @include grid;
+    grid-template-areas: 
+        "martini-titulo martini-titulo img-martini"
+        "descripcion-martini descripcion-martini img-martini"
+        "elaboracion-martini elaboracion-martini elaboracion-martini";
+}
+
+.martini-titulo{
+    grid-area: martini-titulo;
+}
+
+.img-martini{
+    grid-area: img-martini;
+}
+
+.descripcion-martini{
+    grid-area: descripcion-martini;
+}
+
+.elaboracion-martini{
+    grid-area: elaboracion-martini;
+}
+
+.martini-titulo h1{
+    @extend %h1;
+    padding: 40px 0px;
+    
+}
+
+.dry-martini aside img{
+    @include imghover
+}
+
+.descripcion-martini{ 
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-martini td{
+    padding: 4px;
+}
+
+.elaboracion-martini{
+    text-align: center;
+}
+
+.elaboracion-martini h3{
+    font-size: map-get($font-sz, font-l );
+    font-family: 'Cinzel', serif;
+    color: $color-cocktails;
+    padding-top: 34px;
+}
+
+.pasos p{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding: 3px;
+}
+
+.negroni{
+    @include grid;
+    grid-template-areas: 
+        "negroni-titulo negroni-titulo img-negroni"
+        "descripcion-negroni descripcion-negroni img-negroni"
+        "elaboracion-negroni elaboracion-negroni elaboracion-negroni";
+}
+
+.negroni-titulo{
+    grid-area: negroni-titulo;
+}
+
+.img-negroni{
+    grid-area: img-negroni;
+}
+
+.descripcion-negroni{
+    grid-area: descripcion-negroni;
+}
+
+.elaboracion-negroni{
+    grid-area: elaboracion-negroni;
+}
+
+.negroni h1{
+    @extend %h1;
+    padding-bottom: 8px;
+}
+
+.negroni aside img{
+   @include imghover
+}
+
+.descripcion-negroni{
+    font-family: 'Cinzel', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+
+.descripcion-negroni td{
+    padding: 4px;
+}
+
+.elaboracion-negroni h3{
+    font-size: map-get($font-sz, font-l );
+    font-family: 'Cinzel', serif;
+    padding-top: 37px;
+    color: $color-cocktails;
+}
+
+.elaboracion-negroni{
+    text-align: center;
+}
+
+.negroni h4{
+    font-family: 'Cinzel', serif;
+    font-size: map-get($font-sz, font-m );
+    color: $color-cocktails;
+    padding-bottom: 9px;
+}
+
+.elaboracion-negroni .pasos{
+    font-family: 'Playfair Display', serif;
+    font-size: map-get($font-sz, font-m );
+    color:$color-cocktails ;
+    padding: 4px;
+}
+
+.pasos p{
+    padding: 3px;
+}

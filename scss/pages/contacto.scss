@@ -1,0 +1,115 @@
+@import'basics/estilos generales';
+@import'basics/colors';
+@import'basics/size';
+
+main{
+    margin-left: 200px;
+    
+}
+
+legend{
+    box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 0px 125px 18px rgba(0,0,0,0.43);
+    border-radius: 26px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+
+legend:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.06);
+}
+
+section h1{
+    font-size: map-get($font-sz , font-xl);
+    font-family:'Cinzel', serif;
+    text-align: center;
+    padding-top: 10px;
+    color: $color-cocktails;
+}
+
+section form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 20px;
+    max-width: 1000px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    
+    width: 320px;
+    margin: 18px;
+}
+
+.contact-form label{
+    font-size: map-get($font-sz, font-m );
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: $color-cocktails;
+}
+
+.contact-form input{
+    font-size: map-get($font-sz, font-m );
+    height: 30px;
+    padding-left: 8px;
+    border: 2px solid $color-cocktails ;
+    border-radius: 5px;
+}
+
+.contact-form select{
+    font-size: map-get($font-sz, font-m );
+    height: 30px;
+    padding-left: 8px;
+
+    border: 2px solid $color-cocktails;
+    border-radius: 5px;
+}
+
+.contact-area{
+    display: flex;
+    flex-direction: column;
+
+    width: 327px;
+    margin: 18px
+}
+
+.contact-area label{
+    font-size: map-get($font-sz, font-m );
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+
+    color: $color-cocktails;
+}
+
+textarea{
+    font-size: map-get($font-sz, font-m );
+
+    max-width: 100%;
+    height: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.boton{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 130px;
+    padding-bottom: 30px;
+}
+
+.boton input{
+    font-size: map-get($font-sz, font-s );
+    padding: 6px;
+    border: 2px solid $color-cocktails;
+    border-radius: 5px;
+}
